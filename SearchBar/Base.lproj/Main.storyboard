@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Wm6-cR-unu">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SearchBar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="4ky-TU-3cr">
+                                <rect key="frame" x="0.0" y="7" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VSz-d9-rV6">
+                                <rect key="frame" x="0.0" y="63" width="375" height="604"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ppz-fA-MfW">
+                                        <rect key="frame" x="-104" y="315" width="240" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mHL-yu-oVF">
+                                        <rect key="frame" x="0.0" y="9" width="375" height="604"/>
+                                        <color key="backgroundColor" red="0.97735077140000004" green="0.80028456449999996" blue="0.8097952008" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="mHL-yu-oVF" firstAttribute="top" secondItem="VSz-d9-rV6" secondAttribute="top" id="DzJ-ti-Hv8"/>
+                                    <constraint firstItem="mHL-yu-oVF" firstAttribute="leading" secondItem="VSz-d9-rV6" secondAttribute="leading" id="Fw0-TX-Mij"/>
+                                    <constraint firstAttribute="bottom" secondItem="mHL-yu-oVF" secondAttribute="bottom" id="MCT-G6-d9b"/>
+                                    <constraint firstAttribute="trailing" secondItem="mHL-yu-oVF" secondAttribute="trailing" id="X84-Nk-Jrg"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="VSz-d9-rV6" firstAttribute="top" secondItem="4ky-TU-3cr" secondAttribute="bottom" id="3Ah-Yp-dRH"/>
+                            <constraint firstItem="VSz-d9-rV6" firstAttribute="trailing" secondItem="4ky-TU-3cr" secondAttribute="trailing" id="OMH-SI-aUs"/>
+                            <constraint firstItem="VSz-d9-rV6" firstAttribute="leading" secondItem="4ky-TU-3cr" secondAttribute="leading" id="VMQ-Ks-ka6"/>
+                            <constraint firstItem="VSz-d9-rV6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="63" id="VUN-9W-6fw"/>
+                            <constraint firstItem="VSz-d9-rV6" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="XyK-fw-pJo"/>
+                            <constraint firstItem="VSz-d9-rV6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="e2c-Ji-ajg"/>
+                            <constraint firstAttribute="trailing" secondItem="VSz-d9-rV6" secondAttribute="trailing" id="rkw-ev-Ecj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="a0i-uJ-nJe">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="mz8-vO-LFf">
+                            <connections>
+                                <action selector="Search_Btn:" destination="BYZ-38-t0r" id="NuA-3e-G5g"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="my_view" destination="mHL-yu-oVF" id="a56-t1-wN0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="456.80000000000001" y="118.29085457271366"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pM4-nK-aHV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Wm6-cR-unu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3nA-AR-ptM">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="oPP-q1-s9G"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VPL-fm-FSP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-305" y="118"/>
+        </scene>
+    </scenes>
+</document>
